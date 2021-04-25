@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import {HashRouter as Router,Route} from 'react-router-dom';
+import Slider from './components/slider'
+import Import from './components/import'
+export default class App extends Component {
+  render(){
+    return(
+      <Router>
+        <Route path='/' component={Slider} exact />
+        <Route path='/import' component={Import}/>
+      </Router>
+    )
+  }
+  
 }
-
-export default App;

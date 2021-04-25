@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'myNew2';  
+    src: url('../CabinSketch-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'myNew3';  
+    src: url('../SetoFont.ttf');
+  }
+  @font-face {
+    font-family: 'myNew4';  
+    src: url('../你是邮寄人间的温柔_mianfeiziti.com.ttf');
+  }
+/* home */
+.homeTop{
+    width: 100%;
+    height: 450px;
+}
+.homeImg{
+    width: 29%;
+    height: 48%;
+    position: relative;
+    top: 40%;
+    left: -28%;
+}
+.p1{
+    position: relative;
+    top: 29%;
+    left: -5%;
+    font-size: 50px;
+    font-family: myNew2;
+    display: inline-block;
+}
+.p2{
+    position: relative;
+    top: 8%;
+    left: 60%;
+    font-size: 50px;
+    font-family: myNew2;
+    display: inline-block;
+}
+.homeContent{
+    width: 100%;
+    height: 600px;
+    /* background-color: #eef2f3; */
+    text-align: center;
+    padding-top: 15px;
+    /* background-image: url('../image/b2.jpg'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: 100% 100%; */
+}
+.homeMiddle{
+    width: 98%;
+    height: 550px;
+    background-image: url('../image/b2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.contentFirst{
+    width: 150px;
+    position: relative;
+    top: 2%;
+    left: 2%;
+    font-family: myNew3;
+    font-size: 50px;
+    display: inline-block;
+}
+.contentSecond{
+    width: 50%;
+    position: relative;
+    top: 40%;
+    left: 10%;
+    font-family:myNew4;
+    font-size: 30px;
+    display: inline-block;
+}
+.contentSecond div{
+    text-align: left;
+    font-family:myNew4;
+}
+
+/* photo */
+li {
+    float: left;
+    margin: 0 5px;
+    height: 182px;
+  }
+ 
+  .hex {
+    overflow: hidden;
+    display: block;
+    width: 200px;
+    height: 231px;
+    transform: rotate(-60deg) skewY(30deg);
+  }
+  .hexIn {
+    background-color: #ccc;
+    display: block;
+    width: 200px;
+    height: 231px;
+    /* line-height: 116px; */
+    text-align: center;
+    transform: skewY(-30deg) rotate(60deg);
+
+  }
+  li:nth-child(9n + 6) {
+    margin-left: 110px;
+  }
+.imgShow{
+    list-style: none;
+    width: 1060px;
+    margin: 100px auto;
+    height: 500px;
+}
+.pageShow > .btnGroup{
+  width: 200px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px auto;
+}
+.pageShow > .btnGroup > .btn {
+  line-height: 1.5715;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 0 rgba(0,0,0,.015);
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+  color: rgba(0,0,0,.85);
+  border: 1px solid #d9d9d9;
+}
+.photoTop{
+  height: 80px;
+  text-align: center;
+  margin: 0 auto;
+}
+.photoText{
+  font-family: myNew2;
+  font-size: 64px;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+ position: relative;
+ left: -24%;
+}
