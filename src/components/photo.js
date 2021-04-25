@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import pic from '../image/b2.jpg'
+import axios from 'axios'
 
 const PAGE_SIZE = 9
 
@@ -7,26 +7,20 @@ export default class Photo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            list :[
-                { name: 'Home', key: '0',date:'2020-3-1'},
-                { name: 'Article', key: '1',date:'2020-3-1'},
-                { name: 'Photo', key: '2',date:'2020-3-1'},
-                { name: 'Resume', key: '3',date:'2020-3-1'},
-                { name: 'Setting', key: '4',date:'2020-3-1'},
-                { name: 'Home', key: '5',date:'2020-3-1'},
-                { name: 'Article', key: '6',date:'2020-3-1'},
-                { name: 'Photo', key: '7',date:'2020-3-1'},
-                { name: 'Resume', key: '8',date:'2020-3-1'},
-                { name: 'Photo', key: '9',date:'2020-3-1'},
-                { name: 'Resume', key: '10',date:'2020-3-1'},
-                { name: 'Setting', key: '11',date:'2020-3-1'},
-                { name: 'Home', key: '12',date:'2020-3-1'},
-                { name: 'Article', key: '13',date:'2020-3-1'},
-                { name: 'Photo', key: '14',date:'2020-3-1'},
-                { name: 'Resume', key: '15',date:'2020-3-1'},
-            ],
+            list :[],
             currentIndex: 0,
         }
+    }
+
+    async componentDidMount() {
+      try {
+        const {data:{data}} = await axios.get('/api/photos')
+        this.setState({
+          list: data
+        })
+      } catch (e) {
+        console.log(e)
+      }
     }
 
     handleRightPage = () => {
@@ -62,13 +56,9 @@ export default class Photo extends Component {
                 </div>
                 <div className='imgShow'>
                     {
-                        list.slice(currentIndex, currentIndex + PAGE_SIZE).map((item, index) => {
-                            return(
-                            <li key={item.key}>
-                                <span className="hex"><img className="hexIn" alt=' ' src={pic}></img></span>
-                            </li>
-                            )
-                        })
+                        list.slice(currentIndex, currentIndex + PAGE_SIZE).map((item, index) => <li key={item.key}>
+                          <span className="hex"><img className="hexIn" alt=' ' src={item.img_path}></img></span>
+                        </li>)
                     }
                 </div>
                 <div className='pageShow'>

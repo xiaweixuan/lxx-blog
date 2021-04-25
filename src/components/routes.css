@@ -19,7 +19,7 @@
     width: 29%;
     height: 48%;
     position: relative;
-    top: 40%;
+    top: 25%;
     left: -28%;
 }
 .p1{
@@ -142,7 +142,7 @@ li {
 }
 .photoText{
   font-family: myNew2;
-  font-size: 64px;
+  font-size: 54px;
   margin: 0 auto;
   width: 80px;
   height: 80px;

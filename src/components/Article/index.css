@@ -1,0 +1,27 @@
+.article_contain {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin: 10px 30px;
+}
+
+.article_right_card > p{
+  margin: 15px 0;
+}
+.article_right_card {
+  width: 100%;
+}
+.article_card {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  cursor: pointer;
+}
+.article_card > img {
+  width: 100%;
+  margin: 15px 35px;
+  border-radius: 5px;
+}
+.card_main {
+
+}

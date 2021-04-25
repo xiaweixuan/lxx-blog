@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import{Link,Route,Redirect} from 'react-router-dom'
 import Home from '../components/home'
-import Article from '../components/article'
+import Article from '../components/Article'
+import ArticleContent from '../components/Article/Content'
 import Photo from '../components/photo'
 import Resume from '../components/resume'
 import Setting from '../components/setting'
@@ -22,19 +23,18 @@ export default class Import extends Component {
               ]
           }
     }
-    
     haveclick=(item,index)=>{
             let navList = this.state.list;
             navList.forEach(item=>{
                 item.activeTag = false;
             })
             navList[index].activeTag = true;
-			console.log('eeeee', navList)
             this.setState({
                 list: navList
             })
     }
     render() {
+
         return (
             <div className='importBack'>
                 <div className='importRoute'>
@@ -49,7 +49,8 @@ export default class Import extends Component {
                     </div>
                     <div className='content'>
                         <Route path='/import/home' exact component={Home}/>
-                        <Route path='/import/article' component={Article}/>
+                        <Route path='/import/article/:id' component={ArticleContent}/>
+                        <Route path='/import/article' exact component={Article}/>
                         <Route path='/import/photo' component={Photo}/>
                         <Route path='/import/resume' component={Resume}/>
                         <Route path='/import/setting' component={Setting}/>
